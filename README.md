@@ -1,74 +1,74 @@
-# Personal Professional Portfolio
+# Rogers Ramirez Professional Portfolio
 
-## Description 
+This repository contains the personal portfolio site for Rogers Ramirez, a Software Developer, QA Engineer, and Instrumentation Engineer based in Davenport, Florida.
 
-Personal Professional Portfolio developed in HTML and CSS. Wonderful to share skills and experiences through web.
+The site highlights software quality, automation, AWS certification, full-stack development, and an Oil & Gas reliability engineering background.
 
-You can take the app and make your own Portfolio customized. 
+## Site Information
 
+The homepage is organized around the information most useful to recruiters, collaborators, and project partners:
 
-## Table of Contents
+- Professional summary focused on QA engineering, software development, instrumentation, cloud certification, and reliability engineering.
+- Expertise in quality strategy, automation, AWS cloud readiness, and full-stack development fundamentals.
+- Career path including QA Engineer work with Capco, freelance full-stack development, and control and reliability engineering experience with PDVSA Petrocedeno.
+- Selected work areas covering QA delivery, repeatable test coverage, and the TechRisk Framework project.
+- Contact section with direct email, phone, LinkedIn, and GitHub links.
 
-* [URLs](#urls)
-* [Installation](#installation)
-* [Usage](#usage)
-* [Contributing](#Contributing)
-* [License](#license)
-* [Test](#Test)
-* [Questions](#questions)
-* [Screenshots](#screenshots)
+## Contact
 
+Use any of these channels to reach out:
 
-## URLs
+- Email: [rogers.ramirez2008@gmail.com](mailto:rogers.ramirez2008@gmail.com)
+- Phone: [(407) 955-6604](tel:+14079556604)
+- LinkedIn: [linkedin.com/in/rogers-ramirez](https://www.linkedin.com/in/rogers-ramirez)
+- GitHub: [github.com/rogers0404](https://github.com/rogers0404)
 
-* Deployed Application: 
-    - [https://rogers0404.github.io/profile-v2/](https://rogers0404.github.io/02-porfolio-Rogers/) (live)
+## Featured Project
 
-* GitHub Repository:
-    - [HTTPS: https://github.com/rogers0404/profile-v2.git](https://github.com/rogers0404/profile-v2.git)
-    - [GIT: git@github.com:rogers0404/profile-v2.git](git@github.com:rogers0404/profile-v2.git)
+- TechRisk Framework: [github.com/rogers0404/tech-risk-informational](https://github.com/rogers0404/tech-risk-informational)
 
+## Repository
 
-## Installation
+- GitHub repository: [github.com/rogers0404/profile-v2](https://github.com/rogers0404/profile-v2)
+- Live site: [rogers0404.github.io/profile-v2](https://rogers0404.github.io/profile-v2/)
 
-You need some packages to run this application, 
+## Project Structure
 
-- `git clone git@github.com:rogers0404/profile-v2.git        //clone the repository`
+```text
+.
+├── index.html
+├── css/
+│   └── professional.css
+├── js/
+│   └── professional.js
+├── images/
+│   ├── author-1.jpg
+│   ├── work-1.jpg
+│   ├── work-2.jpg
+│   └── work-3.jpg
+├── old-files/
+└── README.md
+```
 
+`old-files/` contains legacy template files and assets that are no longer used by the current homepage.
 
-## Usage 
-None
+## Local Preview
 
-## Contributing
+Because this is a static site, it can be opened directly in a browser from `index.html`.
 
-* Rogers Ramirez, Github User: [rogers0404](http://github.com/rogers0404)
+To serve it locally:
 
+```bash
+python3 -m http.server 8000
+```
 
-## License
+Then open `http://localhost:8000`.
 
-Personal Professional Porfolio with React is licensed under the
+## Validation
 
-![v1](https://img.shields.io/static/v1?label=License&message=None&color=inactive&&style=plastic)
+The current site has been checked with:
 
-None
-
-## Test
-
-None
-
-## Questions
-
-If you have any questions about the application, you can check the documentation on my GitHub profile [https://github.com/rogers0404](https://github.com/rogers0404).
-
-for more information you can have a question via email [rogers.ramirez2008@gmail.com](rogers.ramirez2008@gmail.com).
-
-
-## Screenshots
-
-### Screenshot 1
-
-![](./assets/images/portfolio1.PNG)
-
-### Screenshot 2
-
-![](./assets/images/portfolio2.PNG)
+```bash
+git diff --check
+node --check js/professional.js
+```
