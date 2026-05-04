@@ -328,6 +328,18 @@ h3 {
   margin-bottom: 42px;
 }
 
+.project-heading {
+  display: flex;
+  max-width: none;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.project-heading > div:first-child {
+  max-width: 760px;
+}
+
 .timeline-section,
 .work-section,
 .contact-section {
@@ -357,12 +369,62 @@ h3 {
   font-weight: 600;
 }
 
+.carousel-controls {
+  display: flex;
+  gap: 10px;
+}
+
+.carousel-controls button {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.carousel-controls button:hover,
+.carousel-controls button:focus-visible {
+  border-color: var(--primary);
+  color: var(--primary-dark);
+  outline: none;
+}
+
+.carousel-controls svg {
+  width: 22px;
+  height: 22px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+}
+
+.project-carousel {
+  overflow: hidden;
+}
+
 .work-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-auto-columns: calc((100% - 36px) / 3);
+  grid-auto-flow: column;
+  grid-template-columns: none;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.work-grid::-webkit-scrollbar {
+  display: none;
 }
 
 .work-card {
   overflow: hidden;
+  scroll-snap-align: start;
 }
 
 .work-card > div:last-child {
@@ -407,6 +469,10 @@ h3 {
 
 .work-image-three {
   background-image: linear-gradient(rgba(23, 32, 27, 0.08), rgba(23, 32, 27, 0.18)), url("../images/work-3.jpg");
+}
+
+.work-image-four {
+  background-image: linear-gradient(rgba(23, 32, 27, 0.04), rgba(23, 32, 27, 0.16)), url("../images/ai-agent.png");
 }
 
 .contact-section {
@@ -537,8 +603,13 @@ h3 {
     min-height: 420px;
   }
 
+  .project-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
   .work-grid {
-    grid-template-columns: 1fr;
+    grid-auto-columns: minmax(280px, 82%);
   }
 
   h1 {

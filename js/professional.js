@@ -4,6 +4,10 @@
   var header = document.querySelector("[data-header]");
   var nav = document.querySelector("[data-nav]");
   var navToggle = document.querySelector("[data-nav-toggle]");
+  var carouselTrack = document.querySelector("[data-carousel-track]");
+  var carouselPrev = document.querySelector("[data-carousel-prev]");
+  var carouselNext = document.querySelector("[data-carousel-next]");
+  var carouselTimer;
   var year = document.querySelector("[data-year]");
 
   if (year) {
@@ -32,6 +36,66 @@
       nav.classList.remove("is-open");
       navToggle.setAttribute("aria-expanded", "false");
     });
+  }
+
+  function scrollProjects(direction) {
+    if (!carouselTrack) {
+      return;
+    }
+
+    var card = carouselTrack.querySelector(".work-card");
+    var gap = 18;
+    var distance = card ? card.getBoundingClientRect().width + gap : carouselTrack.clientWidth;
+
+    carouselTrack.scrollBy({
+      left: direction * distance,
+      behavior: "smooth"
+    });
+  }
+
+  function startCarouselAutoplay() {
+    if (!carouselTrack) {
+      return;
+    }
+
+    window.clearInterval(carouselTimer);
+    carouselTimer = window.setInterval(function () {
+      var maxScroll = carouselTrack.scrollWidth - carouselTrack.clientWidth;
+      var isAtEnd = carouselTrack.scrollLeft >= maxScroll - 4;
+
+      if (isAtEnd) {
+        carouselTrack.scrollTo({
+          left: 0,
+          behavior: "smooth"
+        });
+        return;
+      }
+
+      scrollProjects(1);
+    }, 4500);
+  }
+
+  function restartCarouselAutoplay() {
+    window.clearInterval(carouselTimer);
+    window.setTimeout(startCarouselAutoplay, 7000);
+  }
+
+  if (carouselPrev && carouselNext) {
+    carouselPrev.addEventListener("click", function () {
+      scrollProjects(-1);
+      restartCarouselAutoplay();
+    });
+
+    carouselNext.addEventListener("click", function () {
+      scrollProjects(1);
+      restartCarouselAutoplay();
+    });
+  }
+
+  if (carouselTrack) {
+    carouselTrack.addEventListener("pointerdown", restartCarouselAutoplay);
+    carouselTrack.addEventListener("focusin", restartCarouselAutoplay);
+    startCarouselAutoplay();
   }
 
   syncHeaderState();

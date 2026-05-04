@@ -22,9 +22,10 @@ Use any of these channels to reach out:
 - LinkedIn: [linkedin.com/in/rogers-ramirez](https://www.linkedin.com/in/rogers-ramirez)
 - GitHub: [github.com/rogers0404](https://github.com/rogers0404)
 
-## Featured Project
+## Featured Projects
 
 - TechRisk Framework: [rogers0404.github.io/tech-risk-informational](https://rogers0404.github.io/tech-risk-informational/)
+- AnimationJS-CSS: [github.com/rogers0404/ai-agent-css-js-html](https://github.com/rogers0404/ai-agent-css-js-html.git)
 
 ## Repository
 
@@ -41,6 +42,7 @@ Use any of these channels to reach out:
 ├── js/
 │   └── professional.js
 ├── images/
+│   ├── ai-agent.png
 │   ├── author-1.jpg
 │   ├── work-1.jpg
 │   ├── work-2.jpg
