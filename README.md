@@ -19,13 +19,12 @@ The homepage is organized around the information most useful to recruiters, coll
 Use any of these channels to reach out:
 
 - Email: [rogers.ramirez2008@gmail.com](mailto:rogers.ramirez2008@gmail.com)
-- Phone: [(407) 955-6604](tel:+14079556604)
 - LinkedIn: [linkedin.com/in/rogers-ramirez](https://www.linkedin.com/in/rogers-ramirez)
 - GitHub: [github.com/rogers0404](https://github.com/rogers0404)
 
 ## Featured Project
 
-- TechRisk Framework: [github.com/rogers0404/tech-risk-informational](https://github.com/rogers0404/tech-risk-informational)
+- TechRisk Framework: [rogers0404.github.io/tech-risk-informational](https://rogers0404.github.io/tech-risk-informational/)
 
 ## Repository
 
