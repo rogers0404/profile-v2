@@ -8,6 +8,7 @@
   var carouselPrev = document.querySelector("[data-carousel-prev]");
   var carouselNext = document.querySelector("[data-carousel-next]");
   var carouselTimer;
+  var carouselRestartTimer;
   var year = document.querySelector("[data-year]");
 
   if (year) {
@@ -54,7 +55,7 @@
   }
 
   function startCarouselAutoplay() {
-    if (!carouselTrack) {
+    if (!carouselTrack || document.hidden) {
       return;
     }
 
@@ -75,9 +76,14 @@
     }, 4500);
   }
 
-  function restartCarouselAutoplay() {
+  function stopCarouselAutoplay() {
     window.clearInterval(carouselTimer);
-    window.setTimeout(startCarouselAutoplay, 7000);
+    window.clearTimeout(carouselRestartTimer);
+  }
+
+  function restartCarouselAutoplay() {
+    stopCarouselAutoplay();
+    carouselRestartTimer = window.setTimeout(startCarouselAutoplay, 7000);
   }
 
   if (carouselPrev && carouselNext) {
@@ -93,10 +99,22 @@
   }
 
   if (carouselTrack) {
+    carouselTrack.addEventListener("mouseenter", stopCarouselAutoplay);
+    carouselTrack.addEventListener("mouseleave", startCarouselAutoplay);
     carouselTrack.addEventListener("pointerdown", restartCarouselAutoplay);
+    carouselTrack.addEventListener("focusout", startCarouselAutoplay);
     carouselTrack.addEventListener("focusin", restartCarouselAutoplay);
     startCarouselAutoplay();
   }
+
+  document.addEventListener("visibilitychange", function () {
+    if (document.hidden) {
+      stopCarouselAutoplay();
+      return;
+    }
+
+    startCarouselAutoplay();
+  });
 
   syncHeaderState();
   window.addEventListener("scroll", syncHeaderState, { passive: true });

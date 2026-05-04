@@ -44,6 +44,7 @@ Use any of these channels to reach out:
 ├── images/
 │   ├── ai-agent.png
 │   ├── author-1.jpg
+│   ├── professional-photo.png
 │   ├── work-1.jpg
 │   ├── work-2.jpg
 │   └── work-3.jpg

@@ -247,7 +247,7 @@ h3 {
   border-radius: 8px;
   background:
     linear-gradient(180deg, rgba(17, 106, 92, 0.1), rgba(23, 32, 27, 0.58)),
-    url("../images/author-1.jpg") center / cover;
+    url("../images/professional-photo.png") center / cover;
   box-shadow: var(--shadow);
 }
 
