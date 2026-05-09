@@ -1,6 +1,6 @@
 # Rogers Ramirez Professional Portfolio
 
-This repository contains the personal portfolio site for Rogers Ramirez, a Software Developer, QA Engineer, and Instrumentation Engineer based in Davenport, Florida.
+This repository contains the personal portfolio site for Rogers Ramirez, a Software Developer, Consultant, and Instrumentation Engineer based in Davenport, Florida.
 
 The site highlights software quality, automation, AWS certification, full-stack development, and an Oil & Gas reliability engineering background.
 
@@ -10,7 +10,7 @@ The homepage is organized around the information most useful to recruiters, coll
 
 - Professional summary focused on QA engineering, software development, instrumentation, cloud certification, and reliability engineering.
 - Expertise in quality strategy, automation, AWS cloud readiness, and full-stack development fundamentals.
-- Career path including QA Engineer work with Capco, freelance full-stack development, and control and reliability engineering experience with PDVSA Petrocedeno.
+- Career path including Consultant work with Capco, freelance full-stack development, and control and reliability engineering experience with PDVSA Petrocedeno.
 - Selected work areas covering QA delivery, repeatable test coverage, and the TechRisk Framework project.
 - Contact section with direct email, phone, LinkedIn, and GitHub links.
 
